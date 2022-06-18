@@ -1,0 +1,504 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+:root{
+    --marron:#9a3e37;
+    --black:hsl(10, 19%, 6%);
+    --light-color:#666;
+    --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+}
+/* Estilo de fuente */
+*{
+    font-family: 'Nunito', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none; border:none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+/* Estilo a la página */
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5.5rem;
+    scroll-behavior: smooth;
+}
+/* Estilo para el slider  */
+section{
+    padding:2rem 9%;
+}
+section:nth-child(even){
+    background:#eee;
+}
+.sub-heading{
+    text-align: center;
+    color:var(--marron);
+    font-size: 2rem;
+    padding-top: 1rem;
+}
+.heading{
+    text-align: center;
+    color:var(--black);
+    font-size: 3rem;
+    padding-bottom: 2rem;
+    text-transform: uppercase;
+}
+/* boton del slider  */
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 1.7rem;
+    color:#fff;
+    background: var(--black);
+    border-radius: .5rem;
+    cursor: pointer;
+    padding:.8rem 3rem;
+}
+
+.btn:hover{
+    background: var(--marron);
+    letter-spacing: .1rem;
+}
+/* position a la cabecera */
+header{
+    position: fixed;
+    top:0; left: 0; right:0;
+    background: #fff;
+    padding:1rem 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: var(--box-shadow);
+}
+
+header .logo{
+    color:var(--black);
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+
+
+header .navbar a{
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    padding:.5rem 1.5rem;
+    color:var(--light-color);
+}
+
+header .navbar a.active,
+header .navbar a:hover{
+    color:#fff;
+    background: var(--marron);
+}
+
+header .icons i,
+header .icons a{
+    cursor: pointer;
+    margin-left: .5rem;
+    height:4.5rem;
+    line-height: 4.5rem;
+    width:4.5rem;
+    text-align: center;
+    font-size: 1.7rem;
+    color:var(--black);
+    border-radius: 50%;
+    background: #eee;
+}
+
+header .icons i:hover,
+header .icons a:hover{
+    color:#fff;
+    background: var(--marron);
+    transform: rotate(360deg);
+}
+
+header .icons #menu-bars{
+    display: none;
+}
+
+
+
+/* Clases para acomodar los slide  */
+.inicio .inicio-slider .slide{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:2rem; 
+    padding-top: 9rem;
+}
+.inicio .inicio-slider .slide .content{
+    flex:1 1 45rem;
+}
+
+.inicio .inicio-slider .slide .image{
+    flex:1 1 45rem;
+}
+
+.inicio .inicio-slider .slide .image img{
+    width: 100%;
+}
+
+.inicio .inicio-slider .slide .content span{
+    color:var(--marron);
+    font-size: 2.5rem;
+}
+
+.inicio .inicio-slider .slide .content h3{
+    color:var(--black);
+    font-size: 7rem;
+}
+
+.inicio .inicio-slider .slide .content p{
+    color:var(--light-color);
+    font-size: 2.2rem;
+    padding:.5rem 0;
+    line-height: 1.5;
+}
+.swiper-pagination-bullet-active{
+    background:var(--marron);
+}
+
+/* bebidas populares  */
+.bebidas .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+    gap:1.5rem;
+}
+
+.bebidas .box-container .box{
+    padding:2.5rem;
+    background:#fff;
+    border-radius: .5rem;
+    border:.1rem solid rgba(0,0,0,.2);
+    box-shadow: var(--box-shadow);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.bebidas .box-container .box .fa-heart{
+    position: absolute;
+    top:1.5rem;
+    background:#eee;
+    border-radius: 50%;
+    height: 5rem;
+    width:5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    color:var(--black);
+}
+
+.bebidas .box-container .box .fa-heart:hover{
+    background: var(--marron);
+    color:#fff;
+}
+
+.bebidas .box-container .box .fa-heart{
+    right:-15rem;
+}
+
+.bebidas .box-container .box:hover .fa-heart{
+    right:1.5rem;
+}
+
+.bebidas .box-container .box img{
+    height:17rem;
+    margin:1rem 0;
+}
+
+.bebidas .box-container .box h3{
+    color:var(--black);
+    font-size: 2.5rem;
+}
+
+.bebidas .box-container .box .stars{
+    padding:1rem 0;
+}
+
+.bebidas .box-container .box .stars i{
+    font-size: 1.7rem;
+    color:var(--marron);
+}
+
+.bebidas .box-container .box span{
+    color:var(--marron);
+    font-weight: bolder;
+    margin-right: 1rem;
+    font-size: 2.5rem;
+}
+
+/* fin de bebidas populares  */
+
+/* seccion de nosotros  */
+.nosotros .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+    align-items: center;
+}
+
+.nosotros .row .image{
+    flex:1 1 45rem;
+}
+
+.nosotros .row .image img{ 
+    width: 100%;
+}
+
+.nosotros .row .content{
+    flex:1 1 45rem;
+}
+
+.nosotros .row .content h3{
+    color:var(--black);
+    font-size: 4rem;
+    padding:.5rem 0;
+}
+
+.nosotros .row .content p{
+    color:var(--light-color);
+    font-size: 1.5rem;
+    padding:.5rem 0;
+    line-height: 2;
+}
+
+.nosotros .row .content .icons-container{
+    display: flex;
+    gap:1rem;
+    flex-wrap: wrap;
+    padding:1rem 0;
+    margin-top: .5rem;
+}
+
+.nosotros .row .content .icons-container .icons{
+    background:#eee;
+    border-radius: .5rem;
+    border:.1rem solid rgba(0,0,0,.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:1rem;
+    flex:1 1 17rem;
+    padding:1.5rem 1rem;
+}
+
+.nosotros .row .content .icons-container .icons i{
+    font-size: 2.5rem;
+    color:var(--marron);
+}
+
+.nosotros .row .content .icons-container .icons span{
+    font-size: 1.5rem;
+    color:var(--black);
+}
+
+/* fin de seccion de nosotros  */
+
+/* iniciando el menu de licores  */
+.productos .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap:1.5rem;
+}
+
+.productos .box-container .box{
+    background: #fff;
+    border:.1rem solid rgba(0,0,0,.2);
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);    
+}
+
+.productos .box-container .box .image{
+    height: 25rem;
+    width: 100%;
+    padding:1.5rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.productos .box-container .box .image img{
+    height: 100%;
+    width: 100%;
+    border-radius: .5rem;
+    object-fit: cover;
+}
+
+.productos .box-container .box .image .fa-heart{
+    position: absolute;
+    top:2.5rem; right: 2.5rem;
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    text-align: center;
+    font-size: 2rem;
+    background: #fff;
+    border-radius: 50%;
+    color:var(--black);
+}
+
+.productos .box-container .box .image .fa-heart:hover{
+    background-color: var(--marron);
+    color:#fff;
+}
+
+.productos .box-container .box .content{
+    padding:2rem;
+    padding-top: 0;
+}
+
+.productos .box-container .box .content .stars{
+    padding-bottom: 1rem;
+}
+
+.productos .box-container .box .content .stars i{
+   font-size: 1.7rem;
+   color:var(--marron);
+}
+
+.productos .box-container .box .content h3{
+    color:var(--black);
+    font-size: 2.5rem;
+}
+
+.productos .box-container .box .content p{
+    color:var(--light-color);
+    font-size: 1.6rem;
+    padding:.5rem 0;
+    line-height: 1.5;
+}
+
+.productos .box-container .box .content .price{
+    color:var(--marron);
+    margin-left: 1rem;
+    font-size: 2.5rem;
+}
+/* finalizando el menu de licores  */
+
+/* inicio del footer  */
+.footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap:1.5rem;
+}
+
+.footer .box-container .box h3{
+    padding:.5rem 0;
+    font-size: 2.5rem;
+    color:var(--black);
+}
+
+.footer .box-container .box a{
+    display: block;
+    padding:.5rem 0;
+    font-size: 1.5rem;
+    color:var(--light-color);
+}
+
+.footer .box-container .box a:hover{
+    color:var(--marron);
+    text-decoration: underline;
+}
+
+.footer .credit{
+    text-align: center;
+    border-top: .1rem solid rgba(0,0,0,.1);
+    font-size: 2rem;
+    color:var(--black);
+    padding:.5rem;
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.footer .credit span{
+    color:var(--marron);
+}
+
+/* fin del footer  */
+
+.loader-container{
+    position: fixed;
+    top:0; left:0;
+    height:100%; 
+    width:100%;
+    z-index: 10000;
+    background:#fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.loader-container img{
+    width:35rem;
+}
+
+.loader-container.fade-out{
+    top:-110%;
+    opacity:0;
+}
+
+
+
+
+
+
+
+
+
+/* media quieries */
+@media (max-width:991px){
+    html{
+        font-size: 55%;
+    }
+    header{
+        padding: 1rem 2rem;
+    }
+    section{
+        padding: 2rem;
+    }
+}
+
+@media (max-width:768px){
+    header .icons #menu-bars{
+        display: inline-block;
+    }
+    
+    header .navbar{
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        background: #fff;
+        border-top: .1rem solid rgba(0,0,0,.2);
+        border-bottom: .1rem solid rgba(0,0,0,.2);
+        padding: 1rem;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    header .navbar.active{
+        clip-path: polygon(0 0,100% 0, 100% 100%, 0% 100%);
+    }
+
+    header .navbar a{
+        display: block;
+        padding: 1.5em;
+        margin: 1rem;
+        font-size: 2rem;
+        background: #eee;
+    }
+    .inicio .inicio-slider .slide .content h3{
+        font-size: 5rem;
+    }
+
+}
+
+@media (max-width:450px){
+    html{
+        font-size: 50%;
+    }
+
+    .bebidas .box-container .box img{
+        height: auto;
+        width: 100%;
+    }
+    
+}
