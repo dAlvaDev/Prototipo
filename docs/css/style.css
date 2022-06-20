@@ -375,6 +375,41 @@ header .icons #menu-bars{
 }
 /* finalizando el menu de licores  */
 
+/* inicio de contactenos  */
+.contactenos .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+    align-items: center;
+}
+
+.contactenos .row .maps{
+    flex:1 1 45rem;
+}
+
+.contactenos .row .maps iframe{ 
+    width: 100%;
+}
+
+.contactenos .row .content{
+    flex:1 1 45rem;
+}
+
+.contactenos .row .content h3{
+    color:var(--black);
+    font-size: 4rem;
+    padding:.5rem 0;
+}
+
+.contactenos .row .content p{
+    color:var(--light-color);
+    font-size: 1.5rem;
+    padding:.5rem 0;
+    line-height: 2;
+}
+
+/* fin de contactenos  */
+
 /* inicio del footer  */
 .footer .box-container{
     display: grid;
