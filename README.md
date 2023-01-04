@@ -2,5 +2,8 @@
 
 ## Licorería 
 
-###Licorería entre Pisco Y Nazca 
-'Proyecto Terminado'
+🥃 Licorería entre Pisco Y Nazca 🥃 
+
+************************************
+Proyecto Página Web con HTML y CSS
+************************************
